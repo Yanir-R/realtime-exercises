@@ -23,20 +23,20 @@ app.use(express.static("frontend"));
 app.get("/poll", function (req, res) {
   res.json({
     msg: getMsgs(),
-  })
+  });
 });
 
 app.post("/poll", function (req, res) {
-  const {user, text} = req.body;
+  const { user, text } = req.body;
   msg.push({
     user,
     text,
-    time: Date.now()
-  })
+    time: Date.now(),
+  });
 
   res.json({
-    status: 'ok',
-  })
+    status: "ok",
+  });
 });
 
 // start the server
